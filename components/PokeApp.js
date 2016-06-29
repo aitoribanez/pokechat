@@ -15,9 +15,10 @@ export default class PokeApp extends React.Component {
 	}
 
 	onGrowl(name) {
+
 		let text = `${name}, ${name}!`;
 		let message = { id: uid(),text: text };
-		this.state.messages.push();
+		this.state.messages.push(message);
 		let messages = this.state.messages;	
 		this.setState({ messages: messages});
 	}
@@ -30,7 +31,7 @@ export default class PokeApp extends React.Component {
 		];
 
 		return <div class="pokeapp">
-			<PokeTable pokemons={pokemons} onGrowl={this.onGrowl}/>
+			<PokeTable pokemons={pokemons} onGrowl={this.onGrowl} />
 			<PokeChat messages={this.state.messages} />
 		</div>
 	}
