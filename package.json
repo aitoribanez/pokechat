@@ -1,14 +1,20 @@
 {
   "name": "pokechat",
   "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.10.1",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
+    "express": "^4.14.0",
     "jquery": "^3.0.0",
     "react": "^0.13.3",
+    "socket.io": "^1.4.8",
+    "socket.io-client": "^1.4.8",
     "uid": "0.0.2"
   },
   "scripts": {
-    "build": "browserify app.js > build.js -t babelify"
+    "build": "browserify app.js > public/app.js -t babelify",
+    "start": "babel-node index.js"
   },
   "browserify": {
     "transform": [
