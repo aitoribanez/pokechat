@@ -17,7 +17,7 @@ export default class PokeApp extends React.Component {
 	onGrowl(name) {
 		let text = `${name}, ${name}!`;
 		let message = { id: uid(),text: text };
-		this.state.messages.push(message);
+		this.state.messages.push();
 		let messages = this.state.messages;	
 		this.setState({ messages: messages});
 	}
